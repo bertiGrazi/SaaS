@@ -35,12 +35,24 @@ importers:
 
   config/typescript-config: {}
 
+  packages/auth:
+    devDependencies:
+      '@saas/eslint-config':
+        specifier: workspace:*
+        version: link:../../config/eslint-config
+      '@saas/prettier':
+        specifier: workspace:*
+        version: link:../../config/prettier
+      '@saas/tsconfig':
+        specifier: workspace:*
+        version: link:../../config/typescript-config
+
   packages/ui:
     devDependencies:
       '@saas/eslint-config':
         specifier: workspace:*
         version: link:../../config/eslint-config
-      '@saas/typescript-config':
+      '@saas/tsconfig':
         specifier: workspace:*
         version: link:../../config/typescript-config
       '@turbo/gen':
